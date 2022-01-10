@@ -7,6 +7,8 @@ Este projeto é um blog feito para que eu poste minhas opiniões sobre os livros
 ## To-do list
 Coisas que devem ser feitas nesse projeto
 
+- [ ] Estilização das páginas de posts/postagens
+- [ ] Logo novo
 - [ ] Subir ele no Heroku
 - [ ] Validação de campos
 - [ ] Proibição de criação de novos usuários (apenas o dono do blog pode postar, afinal)
