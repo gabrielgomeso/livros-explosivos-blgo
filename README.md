@@ -1,24 +1,16 @@
-# README
+# Livros Explosivos (e como desarmá-los)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Sobre
 
-Things you may want to cover:
+Este projeto é um blog feito para que eu poste minhas opiniões sobre os livros que leio. Ele foi construído baseado no post [do site OneBitCode](https://onebitcode.com/rails-bulma-criando-um-blog-do-zero-em-poucos-minutos/), criado com Ruby on Rails e Bulma.
 
-* Ruby version
+## To-do list
+Coisas que devem ser feitas nesse projeto
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [ ] Subir ele no Heroku
+- [ ] Validação de campos
+- [ ] Proibição de criação de novos usuários (apenas o dono do blog pode postar, afinal)
+- [ ] Botões de compartilhamento nas redes sociais 
+- [ ] Google Analytics
+- [ ] Segurança
+- [ ] Testes
