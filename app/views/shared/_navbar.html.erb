@@ -1,8 +1,9 @@
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="https://onebitcode.com/wp-content/uploads/2020/01/logo-bg-escuro-400.png" width="auto" height='auto'>
+      <a class="navbar-item  has-background-white has-text-black" href="/">
+        <p class="is-family-monospace has-text-weight-bold is-size-3 is-size-4-tablet is-size-5-mobile">LIVROS EXPLOSIVOS</p>
+        <p class="is-family-sans-serif is-size-6 is-hidden-mobile">(e como desarmá-los)</p>
       </a>
  
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -14,9 +15,11 @@
  
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
+      <% if user_signed_in? %>
         <a class="navbar-item" href='/posts/new'>
           + Nova Publicação
         </a>
+      <% end %>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
