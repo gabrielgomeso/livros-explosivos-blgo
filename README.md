@@ -8,6 +8,8 @@ Este projeto é um blog feito para que eu poste minhas opiniões sobre os livros
 Coisas que devem ser feitas nesse projeto
 
 - [ ] Estilização das páginas de posts/postagens
+- [ ] Pesquisa de publicações
+- [ ] Tags/Categorias de publicações
 - [x] Logo novo
 - [x] Subir ele no Heroku
 - [ ] Validação de campos
@@ -17,3 +19,4 @@ Coisas que devem ser feitas nesse projeto
 - [ ] Segurança
 - [ ] Testes
 - [X] Configuração da AWS para publicação das imagens
+- [ ] Comentários (talvez)
