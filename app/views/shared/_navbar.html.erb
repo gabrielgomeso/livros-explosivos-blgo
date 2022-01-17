@@ -24,14 +24,20 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <% unless user_signed_in? %>
-              <a class="button is-light" href='/users/sign_in'>
-                Entrar
-              </a>
-            <% end %>  
-            <% if user_signed_in? %>
-              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'button is-light'  %>
-            <% end %>
+            <div class="field has-addons">
+              <div class="control">
+                <input class="input" type="text" placeholder="Encontre uma publicação">
+              </div>
+              <div class="control">
+                <a class="button is-info">
+                  Search
+                </a>
+              </div>
+
+              <% if user_signed_in? %>
+                <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'button is-light'  %>
+              <% end %>
+            </div> 
           </div>
         </div>
       </div>
