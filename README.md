@@ -10,7 +10,7 @@ Coisas que devem ser feitas nesse projeto
 - [x] Logo novo
 - [x] Subir ele no Heroku
 - [x] Configuração da AWS para publicação das imagens
-- [ ] Páginas de erro
+- [x] Páginas de erro
 - [ ] Estilização das páginas de posts/postagens
 - [ ] Pesquisa de publicações
 - [ ] Tags/Categorias de publicações
