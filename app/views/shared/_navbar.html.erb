@@ -1,7 +1,7 @@
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+ <nav class="navbar has-black-text" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item  has-background-white has-text-black" href="/">
+      <a class="navbar-item" href="/">
         <p class="is-family-monospace has-text-weight-bold is-size-3 is-size-4-tablet is-size-5-mobile">LIVROS EXPLOSIVOS</p>
         <p class="is-family-sans-serif is-size-6 is-hidden-mobile">(e como desarmá-los)</p>
       </a>
@@ -35,7 +35,7 @@
               </div>
 
               <% if user_signed_in? %>
-                <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'button is-light'  %>
+                <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'button is-dark'  %>
               <% end %>
             </div> 
           </div>
