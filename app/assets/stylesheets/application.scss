@@ -17,10 +17,16 @@
 @import "bulma/bulma";
 
 body, 
-.navbar {
+.navbar,
+.card {
   background-color: #FAF5EE;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
   height: 100vh;
+}
+
+.card {
+  border: 0px;
 }
