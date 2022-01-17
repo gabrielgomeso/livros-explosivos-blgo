@@ -21,5 +21,6 @@ Coisas que devem ser feitas nesse projeto
 - [ ] Google Analytics
 - [ ] Segurança
 - [ ] Testes
+- [ ] Contador de views nos posts
 
 - [ ] Comentários (talvez)
