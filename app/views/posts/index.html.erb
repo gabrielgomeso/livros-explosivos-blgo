@@ -1,11 +1,9 @@
-<br/><br/>
-<h1 class="title">Publicações</h1>
-<br/>
- 
-<% @posts.each do |post| %>
-  <div class="columns">
-    <div class="column is-four-fifths">
-      <div class="card">
+<h1 class="title is-size-4 has-text-centered is-family-sans-serif is-uppercase">Últimas públicações</h1>
+
+<div class="columns is-multiline">
+  <% @posts.each do |post| %>
+    <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+      <div class="card is-shadowless">
         <div class="card-image">
           <figure class="image is-full is-marginless is-3by1">
             <%= image_tag post.featured_image %>
@@ -14,12 +12,12 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <a href="<%= post_path(id: post.id) %>"><p class="title is-4"><%= post.author %></p></a>
+              <a href="<%= post_path(id: post.id) %>"><p class="title is-4"><%= post.title %></p></a>
             </div>
           </div>
           <p>Autor: <%= post.author %> - <%= post.created_at.strftime("%d/%m/%Y") %></p>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
