@@ -11,8 +11,11 @@
   </head>
 
   <body>
-      <%= render 'shared/navbar' %>
-      <div class="section">
+    <%= render 'shared/navbar' %>
+    <div class="container">
+
+    
+      <div class='row'>
         <% if notice %>
           <div class="notification">
             <button class="delete"></button>
@@ -27,5 +30,6 @@
         <% end %>
         <%= yield %>
       </div>
+    </div>
   </body>
 </html>
