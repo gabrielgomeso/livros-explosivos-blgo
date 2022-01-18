@@ -16,6 +16,13 @@
 	
 @import "bulma/bulma";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body, 
 .navbar,
 .card {
@@ -25,8 +32,4 @@ body,
 
 body {
   min-height: 100vh;
-}
-
-.card {
-  border: 0px;
 }

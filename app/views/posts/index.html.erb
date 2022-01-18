@@ -1,14 +1,16 @@
 <h1 class="title is-size-4 has-text-centered is-family-sans-serif is-uppercase">Últimas públicações</h1>
 
-<div class="columns is-multiline">
+<div class="columns is-centered is-vcentered is-multiline">
   <% @posts.each do |post| %>
     <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
       <div class="card is-shadowless">
-        <div class="card-image">
-          <figure class="image is-full is-marginless is-3by1">
-            <%= image_tag post.featured_image %>
-          </figure>
-        </div>
+        <% if post.featured_image.attached? %>
+          <div class="card-image">
+            <figure class="image is-full is-marginless is-3by1">
+              <%= image_tag post.featured_image %>
+            </figure>
+          </div>
+        <% end %>
         <div class="card-content">
           <div class="media">
             <div class="media-content">

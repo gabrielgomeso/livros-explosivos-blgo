@@ -1,31 +1,27 @@
- <nav class="navbar has-black-text pb-0 mb-0" role="navigation" aria-label="main navigation">
+ <nav class="navbar has-black-text" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
         <p class="is-family-monospace has-text-weight-bold is-size-3 is-size-4-tablet is-size-5-mobile">LIVROS EXPLOSIVOS</p>
       </a>
  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-      
-      </div>
+    <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <div class="field has-addons">
-              <% if user_signed_in? %>
-                <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'button is-dark'  %>
-              <% end %>
-            </div> 
+        <% if user_signed_in? %>
+          <a class="navbar-item" href='/posts/new'>
+            + Nova Publicação
+          </a>
+          <div class="navbar-item">
+            <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'button is-dark'  %>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
