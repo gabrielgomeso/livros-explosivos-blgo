@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'image_processing'
+gem 'kaminari'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

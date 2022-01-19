@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at desc").page(params[:page])
   end
 
   # GET /posts/1 or /posts/1.json
@@ -20,8 +20,9 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
     @post.author = current_user.name
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save

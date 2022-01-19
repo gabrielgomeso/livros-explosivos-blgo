@@ -1,8 +1,8 @@
 <h1 class="title is-size-4 has-text-centered is-family-sans-serif is-uppercase">Últimas públicações </h1>
 
-<div class="columns is-centered is-vcentered is-multiline">
+<div class="columns is-centered is-multiline">
   <% @posts.each do |post| %>
-    <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+    <div class="column is-centered is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
       <div class="card is-shadowless">
         <% if post.featured_image.attached? %>
           <div class="card-image">
@@ -23,3 +23,8 @@
     </div>
   <% end %>
 </div>
+  <div class="columns is-centered">
+    <div class="column">
+      <%= paginate @posts %>
+    </div>
+  </div>
