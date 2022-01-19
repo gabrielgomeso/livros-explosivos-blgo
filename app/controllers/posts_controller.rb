@@ -20,7 +20,7 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     @post.author = current_user.name
 
     respond_to do |format|
