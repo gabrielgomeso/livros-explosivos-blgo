@@ -1,6 +1,6 @@
 <h1 class="title is-size-4 has-text-centered is-family-sans-serif is-uppercase">Últimas públicações </h1>
 
-<div class="columns is-centered is-vcentered is-multiline">
+<div class="columns is-centered is-multiline">
   <% @posts.each do |post| %>
     <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
       <div class="card is-shadowless">
@@ -18,8 +18,14 @@
             </div>
           </div>
           <p>Autor: <%= post.author %> - <%= post.created_at.strftime("%d/%m/%Y") %></p>
+          <p>Visualizações: <%= post.hits %></p>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+  <div class="columns is-centered">
+    <div class="column">
+      <%= paginate @posts %>
+    </div>
+  </div>
