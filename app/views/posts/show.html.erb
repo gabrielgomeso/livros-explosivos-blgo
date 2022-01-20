@@ -9,6 +9,11 @@
       <div class="column">
         <p class="title"><%= @post.title %></p>
         <p>Visualizações: <%= @post.hits %></p>
+        <p><strong> Por: </strong><%= @post.author %></p>
+        <p><strong> Publicado em: </strong> <%= @post.created_at.strftime("%d/%m/%Y") %></p>
+        <% if @post.updated_at.strftime("%d/%m/%Y") != @post.created_at.strftime("%d/%m/%Y") %>
+          <p><strong> Editado em: </strong> <%= @post.updated_at.strftime("%d/%m/%Y") %></p>
+        <% end %>
       </div>
     </div>
     <div class="columns">
