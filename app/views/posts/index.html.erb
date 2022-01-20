@@ -1,28 +1,28 @@
-<h1 class="title is-size-4 has-text-centered is-family-sans-serif is-uppercase">Últimas públicações </h1>
+<h1 class="title is-size-4 has-text-centered is-family-sans-serif is-underlined">Últimas Públicações </h1>
 
-<div class="columns is-centered is-multiline">
-  <% @posts.each do |post| %>
-    <div class="column is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-      <div class="card is-shadowless">
-        <% if post.featured_image.attached? %>
-          <div class="card-image">
-            <figure class="image is-full is-marginless is-3by1">
-              <%= image_tag post.featured_image %>
-            </figure>
-          </div>
-        <% end %>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <a href="<%= post_path(id: post.id) %>"><p class="title is-4"><%= post.title %></p></a>
+  <div class="columns is-centered is-multiline">
+    <% @posts.each do |post| %>
+      <div class="column is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+        <div class="card is-shadowless">
+          <% if post.featured_image.attached? %>
+            <div class="card-image">
+              <figure class="image is-full is-marginless is-3by1">
+                <%= image_tag post.featured_image %>
+              </figure>
             </div>
+          <% end %>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <a href="<%= post_path(id: post.id) %>"><p class="title is-4"><%= post.title %></p></a>
+              </div>
+            </div>
+            <p>Autor: <%= post.author %> - <%= post.created_at.strftime("%d/%m/%Y") %></p>
+            <p>Visualizações: <%= post.hits %></p>
           </div>
-          <p>Autor: <%= post.author %> - <%= post.created_at.strftime("%d/%m/%Y") %></p>
-          <p>Visualizações: <%= post.hits %></p>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
 </div>
   <div class="columns is-centered is-mobile">
     <div class="column is-two-thirds-mobile">
