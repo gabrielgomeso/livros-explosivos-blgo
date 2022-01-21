@@ -31,6 +31,13 @@
       <%= form.text_field :title, class: 'input' %>
     </div>
   </div>
+
+  <div class="field">
+    <%= form.label 'Categorias', class: 'label' %>
+    <div class="control">
+      <%= form.text_field :tag_list.to_s, value: form.object.tag_list.to_s, class: 'input' %>
+    </div>
+  </div>
  
   <div class="field">
     <%= form.label 'Conteúdo', class: 'label' %>

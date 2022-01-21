@@ -8,7 +8,9 @@ class TagsController < ApplicationController
   end
 
   # GET /tags/1 or /tags/1.json
-  def show; end
+  def show
+    @posts = Post.tagged_with(@tag.name).order("created_at desc").page(params[:page])
+  end
 
   # GET /tags/new
   def new

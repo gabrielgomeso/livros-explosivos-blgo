@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'acts-as-taggable-on', '~> 9.0'
 gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'image_processing'
