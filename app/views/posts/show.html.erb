@@ -14,6 +14,10 @@
         <% if @post.updated_at.strftime("%d/%m/%Y") != @post.created_at.strftime("%d/%m/%Y") %>
           <p><strong> Editado em: </strong> <%= @post.updated_at.strftime("%d/%m/%Y") %></p>
         <% end %>
+        <% @post.tag_list.each do |tag| %>
+          <p class="tag has-text-white is-link is-italic is-info"><%= link_to tag, tag_path(id: find_tag_by_name(tag))%></p>
+        <% end %>
+
       </div>
     </div>
     <div class="columns">
