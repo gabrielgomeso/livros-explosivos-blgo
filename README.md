@@ -15,9 +15,9 @@ Coisas que devem ser feitas nesse projeto
 - [x] Contador de views nos posts
 - [ ] Estilização das páginas de posts/postagens
 - [ ] Pesquisa de publicações
-- [ ] Tags/Categorias de publicações
+- [x] Tags/Categorias de publicações
 - [ ] Validação de campos
-- [ ] Proibição de criação de novos usuários (apenas o dono do blog pode postar, afinal)
+- [x] Proibição de criação de novos usuários (apenas o dono do blog pode postar, afinal)
 - [ ] Botões de compartilhamento nas redes sociais
 - [ ] Google Analytics
 - [ ] Segurança
