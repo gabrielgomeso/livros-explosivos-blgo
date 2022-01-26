@@ -43,7 +43,29 @@ body {
     margin: 0
 }
 
-a {
-  text-decoration: none; /* remove underline */
-	color: inherit; 
+.fb-share-button {
+  background-color: #1877f2;
+  border-radius: 15px;
+  color: white;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  padding: 5px;
+  text-align: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.tag {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.share-buttons {
+  gap: 10px;
 }
