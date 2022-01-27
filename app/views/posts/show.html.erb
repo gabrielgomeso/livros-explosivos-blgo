@@ -32,7 +32,7 @@
           </div>
 
           <a 
-            href="https://twitter.com/intent/tweet?text=Acabei%20de%20ler%20o%20post%20<%= @post.title %>.%20Leia%20também%20em%20https://www.livrosexplosivos.herokuapp.com/posts/<%= @post.id %>&button_hashtag=LivrosExplosivos&ref_src=twsrc%5Etfw" 
+            href="https://twitter.com/intent/tweet?text=Acabei%20de%20ler%20o%20post%20<%= @post.title %>.%20Leia%20também%20em%20https://livrosexplosivos.herokuapp.com/posts/<%= @post.id %>&button_hashtag=LivrosExplosivos&ref_src=twsrc%5Etfw" 
             class="twitter-hashtag-button column is-1" 
             data-show-count="false">Tweet #LivrosExplosivos</a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -42,6 +42,29 @@
     <div class="columns">
       <div class="column">
         <%= @post.content %>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            
+            var disqus_config = function () {
+            this.page.url = "http://livrosexplosivos.herokuapp.com/posts/<%= @post.id %>";;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "post<%= @post.id %>"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://https-livrosexplosivos-com.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </div>
     </div>
   </div>
