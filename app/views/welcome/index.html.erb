@@ -1,0 +1,132 @@
+<main>
+  <div class="container">
+    <h1>Publicações mais recentes</h1>
+    <div class="columns">
+      <div class="column is-3">
+        <div class="card mb-5">
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title"><%= @posts[0].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>
+              <%= truncate(strip_tags(@posts[0].content.to_s), length: 100) %> <%=
+              link_to "Leia mais", post_path(@posts[0]) %>
+            </p>
+            Autor: <%= @posts[0].author %>
+          </div>
+        </div>
+
+        <div class="card mb-5">
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title is-4"><%= @posts[1].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>
+              <%= truncate(strip_tags(@posts[1].content.to_s), length: 100) %> <%=
+              link_to "Leia mais", post_path(@posts[1]) %>
+            </p>
+            Autor: <%= @posts[1].author %>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <div class="card mb-5">
+          <% if @posts[2].featured_image.attached? %>
+            <div class="card-image">
+              <figure class="image is-full">
+                <%= image_tag @posts[2].featured_image %>
+              </figure>
+            </div>
+          <% end %>
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title is-4"><%= @posts[2].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>
+              <%= truncate(strip_tags(@posts[2].content.to_s), length: 300) %> <%=
+              link_to "Leia mais", post_path(@posts[2]) %>
+            </p>
+            Autor: <%= @posts[1].author %>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-2">
+        <div class="card mb-5">
+          <% if @posts[3].featured_image.attached? %>
+            <div class="card-image">
+              <figure class="image is-full">
+                <%= image_tag @posts[3].featured_image %>
+              </figure>
+            </div>
+          <% end %>
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title is-4"><%= @posts[3].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            Autor: <%= @posts[1].author %>
+          </div>
+        </div>
+
+        <div class="card mb-5">
+          <% if @posts[4].featured_image.attached? %>
+            <div class="card-image">
+              <figure class="image is-full">
+                <%= image_tag @posts[4].featured_image %>
+              </figure>
+            </div>
+          <% end %>
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title is-4"><%= @posts[4].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            Autor: <%= @posts[1].author %>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-3">
+        <div class="card mb-5">
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title is-3"><%= @posts[5].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>
+              <%= truncate(strip_tags(@posts[5].content.to_s), length: 100) %> <%=
+              link_to "Leia mais", post_path(@posts[5]) %>
+            </p>
+            Autor: <%= @posts[1].author %>
+          </div>
+        </div>
+        
+        <div class="card mb-5">
+          <div class="card-header">
+            <div class="card-header-title">
+              <h2 class="title is-4"><%= @posts[6].title %></h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>
+              <%= truncate(strip_tags(@posts[6].content.to_s), length: 100) %> <%=
+              link_to "Leia mais", post_path(@posts[6]) %>
+            </p>
+            Autor: <%= @posts[1].author %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

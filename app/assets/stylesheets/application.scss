@@ -30,12 +30,16 @@ body,
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
-  min-height: 100vh;
+nav {
+  grid-area: nav;
 }
 
-.main {
-  min-height: 70vh;
+main {
+  grid-area: body;
+}
+
+footer {
+  grid-area: footer;
 }
 
 .columns,
