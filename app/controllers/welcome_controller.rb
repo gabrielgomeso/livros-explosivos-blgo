@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @posts = Post.order(created_at: :desc).last(7)
+    @posts = Post.order(created_at: :asc).last(7)
   end
 end
