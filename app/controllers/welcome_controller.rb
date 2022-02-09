@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
   end
 
   def check_content
-    @posts = Post.order(created_at: :desc).last(6)
+    @posts = Post.order(created_at: :asc).last(total_posts)
 
     if @posts.length < 7
       i = @posts.length
