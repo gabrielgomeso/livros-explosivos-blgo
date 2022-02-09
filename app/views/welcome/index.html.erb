@@ -1,7 +1,7 @@
 <main class="welcome">
   <div class="container">
     <h1 class="title p-5 is-size-4 has-text-centered is-family-monospace has-text-weight-bold">Últimas Públicações</h1>
-
+    
     <div class="columns">
       <div class="column is-3">
         <div class="card mb-5">
@@ -92,7 +92,7 @@
             </div>
           </div>
           <div class="card-content">
-            Autor: <%= @posts[1].author %>
+            Autor: <%= @posts[4].author %>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
               <%= truncate(strip_tags(@posts[6].content.to_s), length: 100) %> <%=
               link_to "Leia mais", post_path(@posts[6]) %>
             </p>
-            Autor: <%= @posts[1].author %>
+            Autor: <%= @posts[6].author %>
           </div>
         </div>
       </div>
