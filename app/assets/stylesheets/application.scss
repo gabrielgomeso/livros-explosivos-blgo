@@ -27,24 +27,6 @@ body,
 .navbar,
 .card {
   background-color: #FAF5EE;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-nav {
-  grid-area: nav;
-}
-
-main {
-  grid-area: body;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.columns,
-.columns:last-child {
-    margin: 0
 }
 
 .fb-share-button {
@@ -72,4 +54,8 @@ footer {
 
 .share-buttons {
   gap: 10px;
+}
+
+.container {
+  min-height: calc(100vh - 80px - 168px);
 }
