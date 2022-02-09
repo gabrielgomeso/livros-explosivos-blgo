@@ -7,7 +7,7 @@
         <div class="card mb-5">
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title"><%= @posts[0].title %></h2>
+              <h2 class="title"><%= link_to @posts[0].title, post_path(@posts[0]) %> </h2>
             </div>
           </div>
           <div class="card-content">
@@ -22,7 +22,7 @@
         <div class="card mb-5">
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title is-4"><%= @posts[1].title %></h2>
+              <h2 class="title is-4"><%= link_to @posts[1].title, post_path(@posts[1]) %> </h2>
             </div>
           </div>
           <div class="card-content">
@@ -46,7 +46,7 @@
           <% end %>
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title is-4"><%= @posts[2].title %></h2>
+              <h2 class="title is-4"><%= link_to @posts[2].title, post_path(@posts[2]) %> </h2>
             </div>
           </div>
           <div class="card-content">
@@ -70,11 +70,11 @@
           <% end %>
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title is-4"><%= @posts[3].title %></h2>
+              <h2 class="title is-6"><%= link_to @posts[3].title, post_path(@posts[3]) %> </h2>
             </div>
           </div>
           <div class="card-content">
-            Autor: <%= @posts[1].author %>
+            Autor: <%= @posts[3].author %>
           </div>
         </div>
 
@@ -88,7 +88,7 @@
           <% end %>
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title is-4"><%= @posts[4].title %></h2>
+              <h2 class="title is-6"><%= link_to @posts[4].title, post_path(@posts[4]) %> </h2>
             </div>
           </div>
           <div class="card-content">
@@ -101,7 +101,7 @@
         <div class="card mb-5">
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title is-3"><%= @posts[5].title %></h2>
+              <h2 class="title is-3"><%= link_to @posts[5].title, post_path(@posts[5]) %> </h2>
             </div>
           </div>
           <div class="card-content">
@@ -116,7 +116,7 @@
         <div class="card mb-5">
           <div class="card-header">
             <div class="card-header-title">
-              <h2 class="title is-4"><%= @posts[6].title %></h2>
+              <h2 class="title is-4"><%= link_to @posts[6].title, post_path(@posts[6]) %> </h2>
             </div>
           </div>
           <div class="card-content">
