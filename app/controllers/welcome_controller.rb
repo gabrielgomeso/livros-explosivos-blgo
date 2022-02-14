@@ -13,11 +13,7 @@ class WelcomeController < ApplicationController
     @posts = Post.order(created_at: :asc).last(total_posts)
 
     if @posts.length < 7
-      i = @posts.length
-      while i <= 7
-        @posts[i] = @posts[0]
-        i += 1
-      end
+      redirect_to posts_url
     end
   end
 end
