@@ -12,9 +12,11 @@
  *
  *= require_tree .
  *= require_self
+*= require font-awesome
  */
 	
 @import "bulma/bulma";
+@import "font-awesome";
 
 * {
   margin: 0;
@@ -56,6 +58,6 @@ body,
   gap: 10px;
 }
 
-.container {
+.welcome-body {
   min-height: calc(100vh - 80px - 168px);
 }

@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'acts-as-taggable-on', '~> 9.0'
 gem 'aws-sdk-s3', require: false
 gem 'devise'
+gem "font-awesome-rails"
 gem 'image_processing'
 gem 'kaminari'
 gem 'punching_bag'

@@ -1,9 +1,9 @@
-<h1 class="title is-size-4 has-text-centered is-family-sans-serif is-underlined">Últimas Públicações</h1>
+<h1 class="title is-size-4 has-text-centered is-family-sans-serif is-underlined">Todas Públicações</h1>
 
-  <div class="container columns is-centered is-multiline main">
+  <div class="container is-centered">
     <% @posts.each do |post| %>
-      <div class="column is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen ">
-        <div class="card is-shadowless">
+      <div class=" is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen ">
+        <div class="card m-2">
           <% if post.featured_image.attached? %>
             <div class="card-image">
               <figure class="image is-full  is-3by1">
@@ -26,9 +26,9 @@
         </div>
       </div>
     <% end %>
-</div>
-  <div class="columns is-centered is-mobile">
-    <div class="column is-two-thirds-mobile">
-      <%= paginate @posts %>
+    <div class="columns is-centered is-mobile">
+      <div class="column is-two-thirds-mobile m-2">
+        <%= paginate @posts %>
+      </div>
     </div>
   </div>
