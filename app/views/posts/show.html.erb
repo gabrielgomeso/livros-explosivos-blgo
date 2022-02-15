@@ -17,26 +17,6 @@
         <% if @post.updated_at.strftime("%d/%m/%Y") != @post.created_at.strftime("%d/%m/%Y") %>
           <p><strong> Editado em: </strong> <%= @post.updated_at.strftime("%d/%m/%Y") %></p>
         <% end %>
-        
-        <div class="columns p-1 is-flex is-align-items-center is-justify-content-end share-buttons">
-          <div 
-            class="fb-share-button column is-1"
-            data-href="https://livrosexplosivos.herokuapp.com/posts/<%= @post.id %>" 
-            data-layout="button" 
-            data-size="large">
-              <a 
-                target="_blank" 
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flivrosexplosivos.herokuapp.com%2F&amp;src=sdkpreparse" 
-                class="fb-xfbml-parse-ignore">Compartilhar
-              </a>
-          </div>
-
-          <a 
-            href="https://twitter.com/intent/tweet?text=Acabei%20de%20ler%20o%20post%20<%= @post.title %>.%20Leia%20também%20em%20https://livrosexplosivos.herokuapp.com/posts/<%= @post.id %>&button_hashtag=LivrosExplosivos&ref_src=twsrc%5Etfw" 
-            class="twitter-hashtag-button column is-1" 
-            data-show-count="false">Tweet #LivrosExplosivos</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>  
       </div>
     </div>
     <div class="columns">
@@ -44,6 +24,25 @@
         <%= @post.content %>
       </div>
     </div>
+    <div class="columns m-3 p-1 is-flex is-align-items-center is-justify-content-end share-buttons">
+      <div 
+        class="fb-share-button column is-1"
+        data-href="https://livrosexplosivos.herokuapp.com/posts/<%= @post.id %>" 
+        data-layout="button" 
+        data-size="large">
+          <a 
+            target="_blank" 
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flivrosexplosivos.herokuapp.com%2F&amp;src=sdkpreparse" 
+            class="fb-xfbml-parse-ignore">Compartilhar
+          </a>
+      </div>
+
+      <a 
+        href="https://twitter.com/intent/tweet?text=Acabei%20de%20ler%20o%20post%20<%= @post.title %>.%20Leia%20também%20em%20https://livrosexplosivos.herokuapp.com/posts/<%= @post.id %>&button_hashtag=LivrosExplosivos&ref_src=twsrc%5Etfw" 
+        class="twitter-hashtag-button column is-1" 
+        data-show-count="false">Tweet #LivrosExplosivos</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>  
     <div class="columns">
       <div class="column">
         <div id="disqus_thread"></div>

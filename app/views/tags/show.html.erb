@@ -1,16 +1,40 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Publicações com a tag <span class="is-italic">
- <%= @tag.name %> </strong>
-  
-
-  <ul>
-    <% @posts.each do |post| %>
-      <li> <%= post.title %> </li>
-    <% end %>
-  </ul>
+ <div class="container welcome-body is-centered">
+  <h1 class="title has-text-centered is-4">Publicações com a tag <span class="is-italic"><%= @tag.name %> </h1 class="title">
+  <% @posts.each do |post| %>
+    <div class=" is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen ">
+      <div class="card m-2">
+        <% if post.featured_image.attached? %>
+          <div class="card-image">
+            <figure class="image is-full  is-3by1">
+              <%= image_tag post.featured_image %>
+            </figure>
+          </div>
+        <% end %>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <a href="<%= post_path(id: post.id) %>"><p class="title is-4"><%= post.title %></p></a>
+            </div>
+          </div>
+          <p>
+            <%= truncate(strip_tags(post.content.to_s), length: 120) %> <%= link_to "Leia mais", post_path(post) %>
+          </p>
+          <p>Autor: <%= post.author %> </p>
+          <p>Visualizações: <%= post.hits %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="columns is-centered is-mobile">
+    <div class="column is-two-thirds-mobile m-2">
+      <%= paginate @posts %>
+    </div>
+  </div>
+</div>
 </p>
 
-<%= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_tag_path(@tag) %> |
+  <%= link_to 'Back', tags_path %>
+<% end %>
