@@ -1,26 +1,27 @@
-<h2>Entrar</h2>
+<div class="container welcome-body">
+  <h2>Entrar</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :senha %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :senha %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions is-flex is-align-items-center">
+      <%= f.submit "Entre", class: 'button is-focused is-info' %>
+      <%= link_to "ou Registre-se", new_registration_path(:user), class: 'pl-1 is-dark'  %>
     </div>
   <% end %>
-
-  <div class="actions is-flex is-align-items-center">
-    <%= f.submit "Entre", class: 'button is-focused is-info' %>
-    <%= link_to "ou Registre-se", new_registration_path(:user), class: 'pl-1 is-dark'  %>
-  </div>
-<% end %>
-
+</div>
