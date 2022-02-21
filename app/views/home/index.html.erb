@@ -1,12 +1,12 @@
 <div class="container">
   <section class="columns is-mobile is-flex-mobile">
-    <div class="container content-main column is-two-thirds-desktop is-half-tablet is-two-thirds-mobile">
+    <div class="container content-main column is-two-thirds-desktop  is-two-thirds-mobile">
       <div class="container">
         <% @posts.each do |post| %>
           <div class="card mb-2">
             <% if post.featured_image.attached? %>
               <div class="card-image">
-                <figure class="image is-full  is-3by1">
+                <figure class="image is-full is-3by1">
                   <%= image_tag post.featured_image %>
                 </figure>
               </div>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="content-side-bar column is-one-third is-one-quarter-tablet is-hidden-mobile ">
+    <div class="content-side-bar column is-one-third is-one-fifth-tablet is-hidden-mobile">
       <div class="container mb-5 search">
         <div class="field">
           <p class="control has-icons-right">
