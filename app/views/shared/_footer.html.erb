@@ -1,5 +1,12 @@
 <footer class="footer">
-  <div class="container">
+  <div class="container socials-links">
+    <% if !user_signed_in? %>
+        <%= link_to "Entrar", user_session_path, class: 'navbar-item'  %>
+      <% end %>
+
+  </div>
+  <div class="container rights">
     Feito pelo <a href="https://gabrielgo.dev">Gabigol</a>.
   </div>
+  
 </footer>

@@ -12,26 +12,24 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Livros Explosivos" />
     <meta property="og:description"   content="Opiniões não requisitadas sobre livros e coisas feitas por uma mente de gosto duvidoso" />
-    <meta property="og:image"         content="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg" />
+    <meta property="og:image"         content="../../assets/images/EXPLOSIVOS.png" />
   </head>
 
   <body>
     <div id="fb-root"></div>
+    <%= render 'shared/navbar' %>
+    <% if notice || alert %>
+      <div class="notification">
+        <button class="delete"></button>
+        <%= notice || alert%>
+      </div> 
+    <% end %>
+    <%= render 'shared/logo' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+
+
     
-        <% if notice %>
-          <div class="notification">
-            <button class="delete"></button>
-            <%= notice %>
-          </div> 
-        <% end %>
-        <% if alert %>
-          <div class="notification is-danger">
-            <button class="delete"></button>
-            <%= alert %>
-          </div> 
-        <% end %>
-      <%= yield %>
     <script id="dsq-count-scr" src="//https-livrosexplosivos-com.disqus.com/count.js" async></script>
-    
   </body>
 </html>

@@ -61,3 +61,16 @@ body,
 .welcome-body {
   min-height: calc(100vh - 80px - 168px);
 }
+
+.fa{
+  transform: scale(1.5);
+}
+
+.telegram{
+  transform: scale(2);
+}
+
+.logo-img {
+  max-width: 900px;
+  height: auto;
+}

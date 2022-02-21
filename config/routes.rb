@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about/index'
+  get 'contact/index'
   get 'home/index'
   get 'welcome/index'
   resources :tags
