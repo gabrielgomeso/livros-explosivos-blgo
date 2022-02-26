@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="container mb-5 is-flex is-align-items-center is-justify-content-center">
+    <i class="p-3 fa fa-telegram telegram has-text-info"></i>
+    <a class="" href="https://t.me/+bJxg1DTuSPEzNzIx" target="_blank">
+      Siga o nosso canal no Telegram
+    </a>
+  </div>
+
+  <div class="container mb-5 register-newsletter">
+    <h4 class="title is-5">Inscreva-se na nossa Newsletter!</h3>
+    <div class="field has-addons">
+      <div class="control">
+        <input class="input" type="text" placeholder="Digite seu e-mail">
+      </div>
+      <div class="control">
+        <a class="button is-info">
+          Enviar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-flex is-flex-direction-column mb-5 recommended-books">
+    <h3 class="title is-4">Livros absurdos</h3>
+
+  </div>
+
+  <div class="container is-flex is-flex-direction-column mb-5 recommended-books">
+    <h3 class="title is-4">Anúncios</h3>
+
+  </div>
+
+  <div class="container ">
+    <h3 class="title is-4">Tags mais lidas</h3>
+    <div class="block">
+      <% most_used_tags.each do |tag| %>
+        <span class="tag has-text-white is-italic is-info"><%= link_to tag.name, tag_path(id: find_tag_by_name(tag.name))%></span>
+      <% end %>
+    </div>
+  </div>
+</div>

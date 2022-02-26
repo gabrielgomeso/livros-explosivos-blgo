@@ -70,7 +70,15 @@ body,
   transform: scale(2);
 }
 
+
+
+.footer {
+  a:hover{
+    color: white;
+  }
+}
+
 .logo-img {
-  max-width: 900px;
+  max-width: 800px;
   height: auto;
 }

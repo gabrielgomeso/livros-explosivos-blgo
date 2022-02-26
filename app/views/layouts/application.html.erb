@@ -25,7 +25,36 @@
       </div> 
     <% end %>
     <%= render 'shared/logo' %>
-    <%= yield %>
+    <div class="container p-3">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent is-hidden-desktop is-hidden-tablet">
+          <div class="tile is-child">
+            <div class="container mb-2 search">
+              <div class="field">
+                <p class="control has-icons-right">
+                  <input class="input" type="text" placeholder="Digite e busque algo">
+                  <span class="icon is-small is-right">
+                    <i class="fa fa-search"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-vertical is-8">
+          <div class="tile is-parent">
+            <%= yield %>
+          </div>
+        </div>
+
+        <div class="tile is-parent">
+          <article class="tile is-child notification">
+            <%= render 'shared/sidebar' %>
+          </article>
+        </div>
+      </div>
+    </div>
+
     <%= render 'shared/footer' %>
 
 
