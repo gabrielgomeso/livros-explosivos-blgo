@@ -24,13 +24,6 @@
   box-sizing: border-box;
 }
 
-
-body, 
-.navbar,
-.card {
-  // background-color: #FAF5EE;
-}
-
 .fb-share-button {
   background-color: #1877f2;
   border-radius: 15px;
@@ -58,10 +51,6 @@ body,
   gap: 10px;
 }
 
-.welcome-body {
-  min-height: calc(100vh - 80px - 168px);
-}
-
 .fa{
   transform: scale(1.5);
 }
@@ -69,8 +58,6 @@ body,
 .telegram{
   transform: scale(2);
 }
-
-
 
 .footer {
   a:hover{

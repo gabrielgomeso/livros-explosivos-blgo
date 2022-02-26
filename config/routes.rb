@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'contact/index'
   get 'home/index'
   get 'welcome/index'
+  get '/search', to: 'posts#search'
+  
   resources :tags
   resources :posts
   devise_for :users
