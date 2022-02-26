@@ -13,17 +13,17 @@ Coisas que devem ser feitas nesse projeto
 - [x] Páginas de erro
 - [x] Paginação de posts
 - [x] Contador de views nos posts
-- [ ] Estilização das páginas de posts/postagens
+- [x] Estilização das páginas de posts/postagens
 - [ ] Pesquisa de publicações
 - [x] Tags/Categorias de publicações
 - [ ] Validação de campos
 - [x] Proibição de criação de novos usuários (apenas o dono do blog pode postar, afinal)
-- [ ] Botões de compartilhamento nas redes sociais
+- [x] Botões de compartilhamento nas redes sociais
 - [ ] Google Analytics
 - [ ] Segurança
 - [ ] Testes
-- [ ] Footer
-- [ ] Sidebar
+- [x] Footer
+- [x] Sidebar
 - [ ] Integração com a API da Amazon
 
-- [ ] Comentários (talvez)
+- [x] Comentários (talvez)
