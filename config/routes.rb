@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subscribers
   get 'about/index'
   get 'contact/index'
   get 'home/index'
