@@ -20,7 +20,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'acts-as-taggable-on', '~> 9.0'
-gem "ahoy_matey"
 gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem "font-awesome-rails"
